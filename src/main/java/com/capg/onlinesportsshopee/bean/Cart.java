@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 /* Author : AAYUSHI CHANSORIYA
  * Version : 1.0
  * Date : 02-04-2021
@@ -35,7 +36,7 @@ public class Cart implements Serializable{
 	private String cartProductName;
 	
 	@Column(name="quantity",nullable = false)
-	@NotBlank(message="Quantity should be specified")
+	@NotNull(message="Quantity should be specified")
 	 private int quantity;
 	
 	@Column(name="price",nullable = false)

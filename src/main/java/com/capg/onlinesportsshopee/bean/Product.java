@@ -15,6 +15,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /* Author : AAYUSHI CHANSORIYA
  * Version : 1.0
@@ -51,7 +52,7 @@ public class Product implements Serializable {
 	private String color;
 
 	@Column(name = "size", nullable = false)
-	@NotBlank(message = "Size should not be blank")
+	@NotNull(message = "Size should not be blank")
 	private int size;
 
 	@Column(name = "mrp")

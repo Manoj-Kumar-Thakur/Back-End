@@ -13,13 +13,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
-/*
- * Author      : JISHNA K
- * Version     : 1.0
- * Date        : 05-04-2021
- * Description : This is Order Entity class
-*/
+
 
 
 @Entity
@@ -31,11 +27,11 @@ public class Order implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name= "order_id",nullable=false)
-	@NotBlank(message="Order Id should not be blank")
+	@NotNull(message="Order Id should not be blank")
 	private long orderId;
 	
 	@Column(name= "amount",nullable=false)
-	@NotBlank(message="Amount should not be blank")
+	@NotNull(message="Amount should not be blank")
 	private double amount;
 	
 
