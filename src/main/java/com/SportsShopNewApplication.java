@@ -20,7 +20,7 @@ public class SportsShopNewApplication {
 		System.out.println("Connected to database");
 	}
 
-	// Create Docket bean to configure swagger 2 for your application
+	// Create Docket bean to configure swagger 2 for application
 		@Bean
 		public Docket productApi() {
 			return new Docket(DocumentationType.SWAGGER_2).select()
